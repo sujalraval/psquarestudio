@@ -50,8 +50,7 @@ const HeroSection = () => {
               key={index}
               className="mx-4 text-[15vw] font-extrabold uppercase leading-none text-[#abff00] opacity-90 md:text-[12vw] lg:text-[10vw]"
               style={{ fontFamily: "'Archivo Black', sans-serif" }}
-            >
-              creativestudio
+            >creativestudio
             </span>
           ))}
         </div>
