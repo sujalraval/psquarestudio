@@ -5046,6 +5046,55 @@ textarea {
   text-transform: uppercase;
   color: var(--td-common-white);
 }
+.td-hero-title h2 sup {
+  font-size: 60px; /* default */
+}
+
+/* Update the existing mobile media query section at the bottom */
+@media (max-width: 768px) {
+  .td-hero-title h2 sup {
+    font-size: 20px !important; /* Much smaller on mobile */
+    vertical-align: super;
+    line-height: 0;
+  }
+
+  .td-hero-title h2 img {
+    display: none !important; /* hide side images */
+  }
+
+  .td-hero-title h2 {
+    display: block !important; /* Stack lines vertically */
+    text-align: center;
+    line-height: 1.1; /* Tighter line spacing */
+  }
+
+  /* Better control of the P² line */
+  .td-hero-title h2.mb-0 {
+    letter-spacing: 0; /* Remove extra letter spacing */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+
+  /* Control spacing in third line */
+  .td-hero-title h2:last-child {
+    word-spacing: 0.2em; /* Reduce excessive spacing */
+    font-size: 35px; /* Slightly smaller if needed */
+  }
+}
+
+/* Extra small devices - additional adjustments */
+@media (max-width: 575px) {
+  .td-hero-title .title {
+    font-size: 32px !important; /* Even smaller for tiny screens */
+  }
+
+  .td-hero-title h2 sup {
+    font-size: 16px !important;
+  }
+
+  .td-hero-title h2:last-child {
+    font-size: 28px;
+  }
+}
 
 /*=============================
     	01. about
@@ -10761,6 +10810,32 @@ textarea {
   padding-bottom: 40px;
 }
 
+/* ✅ Continuous Scroll Section */
+.slider {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+.slider-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 20s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.slide-item {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin-right: 60px;
+}
 /*=============================
     18. portfolio slicer
 ===============================*/
