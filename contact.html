@@ -18,6 +18,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/header.css" />
     <!--<< Bootstrap min.css >>-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <!--<< magnific-popup.css >>-->
@@ -88,7 +89,50 @@
     <!-- Scroll-top-end-->
 
     <!-- header-area -->
+    <header class="header-area">
+      <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <!-- Replace with your actual logo -->
+            <img src="assets/img/logo/Asset1.png" alt="Company Logo" />
+          </a>
+        </div>
 
+        <!-- Desktop Navigation -->
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><button class="cta-button">Get Started</button></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" id="closeMenu">×</button>
+        <ul>
+          <li><a href="#">Who We Are</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <button class="cta-button">Get Started</button>
+      </div>
+
+      <!-- Overlay -->
+      <div class="overlay" id="overlay"></div>
+    </header>
     <!-- header-area-end -->
     <div id="smooth-wrapper">
       <div id="smooth-content">
@@ -169,8 +213,8 @@
                     data-wow-duration="1s"
                   >
                     <h2 class="td-contact-main-title">
-                      Let’s contact for<br />
-                      better <span>result</span>
+                      Let’s Build Bold<br />
+                      Brands  <span>Together</span>
                     </h2>
                   </div>
                 </div>

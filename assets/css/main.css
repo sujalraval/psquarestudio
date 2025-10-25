@@ -56,6 +56,7 @@
 	26. testimonial
 	27. text
 	28. video
+  29. footer
 
 ==============================================*/
 /*============================================
@@ -124,9 +125,9 @@ body {
   font-weight: 400;
   color: var(--td-theme-3);
   line-height: 26px;
-  backgroundimage: "radial-gradient(#545454 0.2px, transparent 0.2px)";
-  backgroundsize: "15px 15px";
-  background-size: 20px 20px !important;
+  background-image: radial-gradient(#000000 0.2px, transparent 0.2px);
+  background-size: 15px 15px;
+  background-color: #ffffff; /* optional base color */
 }
 
 img,
@@ -1732,7 +1733,7 @@ textarea {
   content: "";
   width: 10px;
   height: 10px;
-  background: #ffbf43;
+  background: var(--td-theme-secondary);
   border-radius: 30px;
   top: 50%;
   transform: translateY(-50%);
@@ -4816,6 +4817,7 @@ textarea {
     height: 50px;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px),
   only screen and (min-width: 576px) and (max-width: 767px),
   (max-width: 575px) {
@@ -5697,14 +5699,14 @@ textarea {
   color: var(--td-common-white);
 }
 .td-service-6-item:hover .td-service-6-item-title h3 {
-  color: #aff172;
+  color: var(--td-common-white);
 }
 .td-service-6-item:hover .td-service-6-text p {
   color: rgba(255, 255, 255, 0.7);
 }
 .td-service-6-item:hover .td-service-6-btn a {
-  border: 1px solid #ffbf43;
-  background: #ffbf43;
+  border: 1px solid var(--td-theme-secondary);
+  background: var(--td-theme-secondary);
 }
 .td-service-6-item-title {
   display: flex;
@@ -5733,6 +5735,9 @@ textarea {
   letter-spacing: -0.01em;
   color: var(--td-grey-5);
   transition: all 0.4s ease;
+}
+.td-contact-7-slide-active .swiper-wrapper {
+  transition-timing-function: linear !important;
 }
 .td-service-6-btn a {
   border: 1px solid rgba(6, 50, 49, 0.15);
@@ -6488,6 +6493,8 @@ textarea {
 /*=============================
 	26. testimonial
 ===============================*/
+/* Your existing CSS remains the same, just add this at the end */
+
 .td-testimonial-title {
   font-weight: 800;
   font-size: 80px;
@@ -6531,6 +6538,7 @@ textarea {
 }
 .td-testimonial-navigation span {
   transition: all 0.4s ease;
+  cursor: pointer;
 }
 .td-testimonial-navigation span:hover {
   color: var(--td-common-black);
@@ -6823,6 +6831,11 @@ textarea {
   .td-brand-slide-active .swiper-slide {
     width: 180px;
   }
+}
+
+/* Add cursor pointer to navigation arrows */
+.td-testimonial-navigation span {
+  cursor: pointer;
 }
 
 /*=============================
@@ -7641,7 +7654,7 @@ textarea {
   font-weight: 600;
   font-size: 22px;
   letter-spacing: -0.02em;
-  color: var(--td-common-black);
+  color: var(--td-common-white);
 }
 .td-blog-postbox-user-profile .para {
   line-height: 22px;
@@ -7817,7 +7830,7 @@ textarea {
   font-weight: 500;
   font-size: 18px;
   letter-spacing: -0.02em;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255, 255, 255);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px),
   only screen and (min-width: 768px) and (max-width: 991px),
@@ -7852,7 +7865,7 @@ textarea {
   font-weight: 500;
   font-size: 18px;
   letter-spacing: -0.02em;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255, 255, 255);
 }
 .td-footer-widget-list li a:hover {
   color: var(--td-theme-secondary);
@@ -7870,7 +7883,7 @@ textarea {
   font-family: var(--td-ff-body);
   font-weight: 700;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgb(255, 255, 255);
 }
 .td-footer-form input:focus {
   border: 1px solid var(--td-theme-secondary);
@@ -7891,7 +7904,7 @@ textarea {
 .td-footer-copyright p {
   font-weight: 500;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255, 255, 255);
 }
 .td-footer-copyright p a {
   color: var(--td-theme-secondary);
@@ -7912,12 +7925,18 @@ textarea {
   border-color: var(--td-theme-secondary);
   color: var(--td-common-black);
 }
+
+/* Footer 2 Styles with Updated Background and Text Colors */
+.td-footer-2-wrap {
+  background-color: var(--td-theme-primary);
+  color: var(--td-common-white);
+}
 .td-footer-2-bigtitle {
   font-weight: 500;
   font-size: 50px;
   line-height: 110%;
   letter-spacing: -0.02em;
-  color: var(--td-common-black);
+  color: var(--td-common-white);
   font-family: var(--td-ff-body);
 }
 @media (max-width: 575px) {
@@ -7929,45 +7948,46 @@ textarea {
   }
 }
 .td-footer-2-border {
-  border-top: 1px solid rgba(10, 17, 25, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding: 28px 0px 16px 0px;
 }
 .td-footer-2-wrap .td-footer-3-title {
   font-family: var(--td-ff-body);
-  color: var(--td-common-black);
+  color: var(--td-common-white);
 }
 .td-footer-2-wrap .td-footer-3-widget .links {
-  color: #595c61;
+  color: rgba(255, 255, 255, 0.8);
 }
 .td-footer-2-wrap .td-footer-3-widget .links:hover {
-  color: var(--td-common-black);
+  color: var(--td-common-white);
 }
 .td-footer-2-wrap .td-footer-3-widget .links-2 {
-  color: var(--td-common-black);
+  color: var(--td-common-white);
 }
 .td-footer-2-wrap .td-footer-3-widget .links-2:hover {
-  color: #595c61;
+  color: rgba(255, 255, 255, 0.8);
 }
 .td-footer-2-wrap .td-footer-3-social a {
-  border: 1px solid rgba(10, 17, 25, 0.15);
-  color: var(--td-common-black);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--td-common-white);
 }
 .td-footer-2-wrap .td-footer-3-social a:hover {
   background: var(--td-theme-secondary);
   color: var(--td-common-white);
 }
 .td-footer-2-wrap .td-footer-3-menu ul li a {
-  color: rgba(89, 92, 97, 0.65);
+  color: rgba(255, 255, 255, 0.8);
 }
 .td-footer-2-wrap .td-footer-3-menu ul li a:hover {
-  color: var(--td-common-black);
+  color: var(--td-common-white);
 }
 .td-footer-2-wrap .td-footer-3-copyright {
-  color: #595c61;
+  color: rgba(255, 255, 255, 0.8);
 }
 .td-footer-2-wrap .td-footer-3-copyright a {
-  color: var(--td-common-black);
+  color: var(--td-common-white);
 }
+
 .td-footer-3-bigtitle {
   font-family: var(--td-ff-manrope);
   font-size: 60px;
@@ -8206,7 +8226,7 @@ textarea {
 .td-footer-5-widget.td-border::after {
   position: absolute;
   content: "";
-  background: rgba(255, 255, 255, 0.15);
+  background: #0d247c;
   height: 78px;
   width: 1px;
   top: 10px;
@@ -9362,8 +9382,8 @@ textarea {
   }
 }
 .td-counter-6-item:hover {
-  background: #ffbf43;
-  border-color: #ffbf43;
+  background: var(--td-theme-secondary);
+  border-color: var(--td-theme-secondary);
 }
 .td-counter-6-item .count {
   font-family: var(--td-ff-rethink);
@@ -12291,4 +12311,10 @@ textarea {
 
 .grey-bg {
   background-color: var(--td-grey-1) !important;
+}
+
+/* 29. footer */
+footer {
+  background-color: var(--td-theme-primary);
+  color: var(--td-common-white);
 }
