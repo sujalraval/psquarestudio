@@ -13,7 +13,7 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="assets/img/logo/favicon.png"
+      href="assets/img/logo/Asset1.ico"
     />
     <!-- Place favicon.ico in the root directory -->
 
@@ -47,13 +47,13 @@
       <div class="animation-preloader">
         <div class="spinner"></div>
         <div class="txt-loading">
-          <span data-text-preloader="P" class="letters-loading"> P </span>
-          <span data-text-preloader="S" class="letters-loading"> S </span>
-          <span data-text-preloader="Q" class="letters-loading"> Q </span>
-          <span data-text-preloader="U" class="letters-loading"> U </span>
-          <span data-text-preloader="A" class="letters-loading"> A </span>
-          <span data-text-preloader="R" class="letters-loading"> R </span>
-          <span data-text-preloader="E" class="letters-loading"> E </span>
+          <span data-text-preloader="" class="letters-loading"> P </span>
+          <span data-text-preloader="" class="letters-loading"> S </span>
+          <span data-text-preloader="" class="letters-loading"> Q </span>
+          <span data-text-preloader="" class="letters-loading"> U </span>
+          <span data-text-preloader="" class="letters-loading"> A </span>
+          <span data-text-preloader="" class="letters-loading"> R </span>
+          <span data-text-preloader="" class="letters-loading"> E </span>
         </div>
         <p class="text-center">Loading</p>
       </div>
@@ -74,7 +74,6 @@
         </div>
       </div>
     </div>
-
     <!-- Start Cursor Pointer -->
     <div class="mouse-follower">
       <span class="cursor-outline"></span>
@@ -102,11 +101,19 @@
         <!-- Desktop Navigation -->
         <nav>
           <ul class="nav-menu">
-            <li><a href="#">Who We Are</a></li>
-            <li><a href="/portfolio-three-columns.html">Portfolio</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="portfolio-three-columns.html">Portfolio</a></li>
             <li><a href="service.html">Services</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><button class="cta-button">Get Started</button></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li>
+              <button
+                class="cta-button"
+                onclick="window.location.href='contact.html'"
+              >
+                Get Started
+              </button>
+            </li>
           </ul>
         </nav>
 
@@ -122,12 +129,15 @@
       <div class="mobile-menu" id="mobileMenu">
         <button class="close-menu" id="closeMenu">×</button>
         <ul>
-          <li><a href="#">Who We Are</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Who We Are</a></li>
           <li><a href="portfolio-three-columns.html">Portfolio</a></li>
           <li><a href="service.html">Services</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
-        <button class="cta-button">Get Started</button>
+        <a href="contact.html"
+          ><button class="cta-button">Get Started</button></a
+        >
       </div>
 
       <!-- Overlay -->
@@ -637,10 +647,12 @@
                     <div class="td-footer-3-menu mb-10">
                       <ul>
                         <li>
-                          <a href="portfolio-three-columns.html">Project </a>
+                          <a href="about.html">Who We Are</a>
                         </li>
-                        <li><a href="#">What we do</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li>
+                          <a href="portfolio-two-columns.html">Portfolio</a>
+                        </li>
+                        <li><a href="service.html">Services</a></li>
                         <!-- <li><a href="#">Blog</a></li> -->
                         <li><a href="contact.html">Contact</a></li>
                       </ul>
@@ -663,6 +675,8 @@
     </div>
 
     <!-- JS here -->
+    <!-- header.js -->
+    <script src="assets/js/header.js"></script>
     <!--<< jquery.Js >>-->
     <script src="assets/js/vendor/jquery.js"></script>
     <!--<< bootstrap.min.Js >>-->
