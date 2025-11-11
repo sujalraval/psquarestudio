@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Parody - Digital Agency Portfolio Html Template</title>
-    <meta
-      name="description"
-      content="Parody - Digital Agency Portfolio Html Template"
-    />
+    <title>PSquare Studio</title>
+    <meta name="description" content="PSquare Studio" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link
@@ -236,9 +233,25 @@
                   >
                     <form
                       id="contact-form"
-                      action="assets/mail.php"
+                      action="https://api.web3forms.com/submit"
                       method="POST"
                     >
+                      <input
+                        type="hidden"
+                        name="access_key"
+                        value="7a186f83-d296-4c07-b873-3f8750a3c421"
+                      />
+                      <input
+                        type="hidden"
+                        name="subject"
+                        value="New Contact Form Submission from PSQUARE"
+                      />
+                      <input
+                        type="hidden"
+                        name="redirect"
+                        value="https://yourdomain.com/thank-you.html"
+                      />
+
                       <div class="row">
                         <div class="col-12 mb-25">
                           <label for="name">Name</label>
@@ -247,6 +260,7 @@
                             name="name"
                             id="name"
                             type="text"
+                            required
                           />
                         </div>
                         <div class="col-md-6 mb-25">
@@ -255,7 +269,8 @@
                             class="td-input"
                             name="email"
                             id="email"
-                            type="text"
+                            type="email"
+                            required
                           />
                         </div>
                         <div class="col-md-6 mb-25">
@@ -265,6 +280,7 @@
                             name="phone"
                             id="phone"
                             type="text"
+                            required
                           />
                         </div>
                         <div class="col-12 mb-25">
@@ -284,19 +300,20 @@
                             id="message"
                             cols="30"
                             rows="10"
+                            required
                           ></textarea>
                         </div>
                         <div class="col-12">
                           <button type="submit" class="td-btn-group">
-                            <span class="td-btn-circle">
-                              <i class="fa-solid fa-arrow-right"></i>
-                            </span>
+                            <span class="td-btn-circle"
+                              ><i class="fa-solid fa-arrow-right"></i
+                            ></span>
                             <span class="td-btn-2 td-btn-primary"
                               >Send message</span
                             >
-                            <span class="td-btn-circle">
-                              <i class="fa-solid fa-arrow-right"></i>
-                            </span>
+                            <span class="td-btn-circle"
+                              ><i class="fa-solid fa-arrow-right"></i
+                            ></span>
                           </button>
                           <p class="ajax-response pt-20"></p>
                         </div>
@@ -440,5 +457,34 @@
     <script src="assets/js/wow.js"></script>
     <!--<< main.Js >>-->
     <script src="assets/js/main.js"></script>
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const form = e.target;
+          const responseMessage = form.querySelector(".ajax-response");
+
+          const formData = new FormData(form);
+
+          responseMessage.textContent = "Sending...";
+
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+          });
+
+          const result = await response.json();
+
+          if (response.ok) {
+            responseMessage.textContent =
+              "Thank you! Your message has been sent successfully.";
+            form.reset();
+          } else {
+            responseMessage.textContent =
+              "Oops! Something went wrong. Please try again later.";
+          }
+        });
+    </script>
   </body>
 </html>
